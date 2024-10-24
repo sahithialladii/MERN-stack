@@ -1,0 +1,28 @@
+/*element selector*/
+p{
+    color:aqua
+}
+
+/*universal selector*/
+/*{
+    color:bisque
+}*/
+
+/*class selector-bestv practice*/
+.myclass{
+    color:beige
+}
+
+/*ID selector*/
+#myclass{
+    background-color:azure
+}
+
+body{
+    margin:0px;
+    padding:0px;
+    background-color:black;
+    border:1px ;
+    height: 100vh;
+    width: 100vw;
+}

@@ -1,0 +1,55 @@
+body{
+    height:100vh;
+    width:100vw;
+    background-color:aquamarine;
+    margin:0px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-form{
+    background-color:beige;
+    height:40vh;
+    width:40vw;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    gap:2rem;
+}
+.login-input{
+    padding:1rem;
+    border:0px;
+    width:80%;
+    outline:none;
+    box-shadow:
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  100px 100px 80px rgba(0, 0, 0, 0.07)
+;
+}
+.login-button{
+    padding:1rem;
+    width:85%;
+    border:0px;
+    border-radius:5px;
+    outline:none;
+    box-shadow:
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  100px 100px 80px rgba(0, 0, 0, 0.07)
+;
+color:cadetblue;
+font-weight:bold;
+cursor:pointer;
+border:3px solid transparent;
+}
+.login-button:hover{
+    border:3px solid;
+}
