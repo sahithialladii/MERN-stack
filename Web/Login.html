@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="Loginstyle.css">
 </head>
 <body>
-    <form class="login-form">
-        <input type="Email" id=""  class="login-input" placeholder="Email" required>
-        <input type="Password" id="" class="login-input" placeholder="Password" required>
+    <form class="login-form" onsubmit="Login(event)">
+        <input type="Email" id="email" name="" class="login-input" placeholder="Email" required>
+        <input type="Password" id="password" name="" class="login-input" placeholder="Password" required>
         <input type="submit" value="Login" class="login-button">
         <a href="" >Forgot Password?</a>
     </form>
+    <!-- <button class="login-button" onclick="myfunction()">Click</button> -->
+     <!-- to comment ctrl+/  in html-->
 </body>
 <script>
     console.log("Hello");
@@ -41,8 +43,63 @@
         isalive:true
     }
     console.log(obj);
+    console.log(obj.name)
+    const{ name,loc,age,isalive}=obj
+    console.log(name)
+    console.log(loc)
+    console.log(age)
+    console.log(isalive)
+
 
     let arr=["a",obj,x]//array may contain string,variable,object also
     console.log(arr);
+    let arr2=[1,2,3,4,5,6]
+    console.log(arr2);
+    let arr3=[arr,"zsfsd",arr2]
+    console.log(arr3);//prints arr of two arrays
+    //arr3 contains two arrays upon opening we get elements inside those arrays
+
+    //to concatenate both arrays
+    //spread operator
+    let arr4=[...arr,"dfs",...arr2];//spread operator
+    console.log(arr4);
+
+    //functions in js
+    //two types works similarly diff syntax
+    function myfunction(){
+        console.error("hello")
+        console.warn("hello")
+    }
+    //myfunction()//call the function
+
+    function Login(event){
+        event.preventDefault()
+        let email =document.getElementById('email').value;
+        let password=document.getElementById('password').value;
+        console.log("Login: "+email+" "+ password);
+        if(password.length<5){//password strength should be above 5 letters
+            alert('password should contain more than 5 letters')
+        }else if(email==="admin@gmail.com" && password==="123456"){
+            alert('login success')
+            API()
+        }
+        else{
+            alert("invalid credentials")
+        }
+    }
+    async function API(){
+        console.log("called API");
+        try{
+            const response=await fetch('https://671b71572c842d92c37ff144.mockapi.io/Productsapp/products')
+            console.log(await response.json)
+            if(response.status===200){
+                console.log("success")
+                console.log(await response.json)
+                
+            }
+        }catch(error){
+            console.error(error)
+        }
+    }
 </script>
 </html>
