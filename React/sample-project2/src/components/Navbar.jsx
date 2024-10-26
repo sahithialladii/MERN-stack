@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
 const Navbar = ({ appdata, logo }) => {
     const [numberstate, setNumberstate]=useState(0)
@@ -10,7 +10,7 @@ const Navbar = ({ appdata, logo }) => {
     console.log(numberstate)
     console.log(stringstate)
     console.log(arraystate)
-    
+
     return (
     <>
         {appdata.appname} {logo}
