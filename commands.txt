@@ -1,0 +1,16 @@
+npm-node package manager
+nvm-node version manager
+npx-node package execute
+
+node -v-->node js version check
+npm -v-->node package manager version check
+nvm -v-->node version manager version check
+npm create-->init prebuilt framework template
+npm  i package-->install nom package
+npm i package@latest-->latest is to fetch recent version
+npm i package1 package2-->install multiple packages at once
+npm i package -g-->install package globally
+npm i package -D-->install package as a Dev Dependency
+npm audit-->check for depricated(outdated) packages
+npm audit fix-->to soft fix he depricated(outdated) packages
+npm audit fix --force-->hard fix the depricated packages
