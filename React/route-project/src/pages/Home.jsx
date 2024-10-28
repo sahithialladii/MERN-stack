@@ -83,29 +83,48 @@ const Home = () => {
 
         <form action="#" className="mt-8 grid grid-cols-6 gap-6">
           <div className="col-span-6 sm:col-span-3">
-            <label htmlFor="FirstName" className="block text-sm font-medium text-gray-700">
-              Name
-            </label>
+          <label
+  htmlFor="text"
+  className="relative block overflow-hidden rounded-md border border-gray-200 px-3 pt-3 shadow-sm focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600"
+>
+  <input
+    type="text"
+    id="UserName"
+    placeholder="UserName"
+    className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
+  />
 
-            <input
-              type="text"
-              id="FirstName"
-              name="first_name"
-              className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-              />
+  <span
+    className="absolute start-3 top-3 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-3 peer-focus:text-xs"
+  >
+    UserName
+  </span>
+</label>
+
           </div>
 
 
-          <div className="col-span-6">
-            <label htmlFor="Email" className="block text-sm font-medium text-gray-700"> Email </label>
+<div className='col-span-6 sm:col-span-3'>
+<label
+  htmlFor="UserEmail"
+  className="relative block overflow-hidden rounded-md border border-gray-200 px-3 pt-3 shadow-sm focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600"
+>
+  <input
+    type="email"
+    id="UserEmail"
+    placeholder="Email"
+    className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
+  />
 
-            <input
-              type="email"
-              id="Email"
-              name="email"
-              className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-              />
-          </div>
+  <span
+    className="absolute start-3 top-3 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-3 peer-focus:text-xs"
+  >
+    Email
+  </span>
+</label>
+
+</div>
+
 
           <div className="col-span-6 sm:col-span-3">
             <label htmlFor="Password" className="block text-sm font-medium text-gray-700"> Password </label>
