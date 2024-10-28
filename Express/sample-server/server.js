@@ -12,7 +12,7 @@ const app=express()//app will directly interact with express library
 app.use(express.json())
 
 app.get('/',(req,res)=>{
-    res.status(200).json("Hello");
+    res.status(500).json("Hello");
 })
 
 
