@@ -3,6 +3,7 @@ const mongoose=require('mongoose')
 
 
 
+//creation of product schema
 const ProductsSchema= new mongoose.Schema({
     name:{
         type:String,
@@ -20,6 +21,7 @@ const ProductsSchema= new mongoose.Schema({
 })
 
 
+// assign the schema to productsmodel
 const Products=mongoose.model("Products",ProductsSchema)
 
 module.exports=mongoose
