@@ -27,7 +27,7 @@ router.get('/all',async(req,res)=>{//all is an api endpoint//and is another api 
     try{
         const products=await Products.find()//find() is a mongoose method
         res.status(200).json(products)//async and await..our operation should wait until it gets the response
-    }catch{
+    }catch(error){
         res.status(500).json({message:error})//can use error.message
     }
 })
@@ -55,8 +55,8 @@ router.put('/edit/:id',async(req,res)=>{
         if(!existingproduct){
             res.status(404).json({message: "Product not found"})
         }
-        const updateproduct=await Products.findByIdAndUpdate(id,req.body,{new:true})
-        res.status(200).json(updateproduct)
+        const updatedproduct=await Products.findByIdAndUpdate(id,req.body,{new:true})
+        res.status(200).json(updatedproduct)
     }catch(error){
         res.status(500).json({message:error.message})
     }
