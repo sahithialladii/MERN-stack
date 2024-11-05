@@ -47,5 +47,34 @@ router.post('/add',async(req,res)=>{
     }
 })
 
+router.put('/edit/:id',async(req,res)=>{
+    try{
+        const id=req.params.id
+        const existingorder=await Orders.findOne({_id:id})
+        if(!existingorder){
+            res.status(404).json({message: "Order not found"})
+        }
+        const updateorder=await Orders.findByIdAndUpdate(id,req.body,{new:true})
+        res.status(200).json(updateorder)
+    }catch(error){
+        res.status(500).json({message:error.message})
+    }
+})
+
+
+router.delete('/delete/:id',async(req,res)=>{
+    try{
+        const id=req.params.id
+        const existingorder=await Orders.findOne({_id:id})
+        if(!existingorder){
+            res.status(404).json({message: "Order not found"})
+        }
+        await Orders.findByIdAndDelete(id)
+        res.status(200).json({message:"Order Deleted"})
+    }catch(error){
+        res.status(500).json({message:error.message})
+    }
+})
+
 module.exports =router
 
