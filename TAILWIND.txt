@@ -1,0 +1,56 @@
+TAILWIND
+	h-height   h-screen-->100vh   h-full-->100%
+			to give custom height-->h-[40px]  or h-[40rem] or h-[40vh] or h-[40%]
+	w-width   
+	min h-
+	min w-
+	max h-
+	max w-
+flex
+flex-row-->flex direction will be row
+flex-col-->flex direction will be column
+justify-center-->contents at center
+justify-start-->contents at start of flex
+items-center-->aligns items at the center
+gap-->default gap 0.25 rem can be customized (8rem)
+
+
+color palette available in net(if background bg-color-number(shade number dark or light) or text-color-     
+50-lightest color
+950-darkest color
+
+own color-->bg-[own color]
+
+opacity
+bg-color-number/opacity(number)
+
+
+text-sm-->makes text small
+text-xl-->extra large
+text xxxl-->big
+
+font-bold-->makes it bold
+
+
+
+border-2-->adds a border
+rounded-sm,md,large-->makes the borders rounded
+padding-->adds tabs or space inside border-->p-10
+px-->padding in x-axis
+py-->padding in y-axis
+pt-->padding in the top                                       same for margins also mt,mx,my
+padding adds space in that specific direction
+
+
+
+shadow-2rem    shadow-sm    shadow-md    shadow-lg  
+we can add colors to shadows
+shadow-pink-500
+
+
+hover:bg-pin-500-->whenever we hover over it,color will be shown
+hover can be added to shadow-->whenever hovered shadow will be displayed
+
+
+
+
