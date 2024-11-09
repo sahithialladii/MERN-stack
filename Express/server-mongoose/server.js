@@ -1,18 +1,16 @@
-const express=require('express')
-
-
-const app=express()
-const port=3000
+const express = require('express')
+const app = express()
+const port = 3000
 app.use(express.json())
-const db=require('./config/db')
-//to connect our modekl to db we need to import it
-const Products=require('./routes/ProductRoute')
-const Users = require('./models/UsersModel')
-const Orders = require('./models/OrdersModel')
+const db = require('./config/db')
+const Products = require('./routes/ProductRoute')
+const Users = require('./routes/UserRoute')
+const Orders = require('./routes/OrderRoute')
+const Auth = require('./routes/AuthRoute')
+app.get('/', (req, res) => res.status(418).json({ message: "Welcome" }))
+app.use('/products', Products)
+app.use('/users', Users)
+app.use('/orders', Orders)
+app.use('/auth', Auth)
 
-
-app.get('/',(req,res)=>res.status(200).json({ message:"welcome"}))
-app.use('/products',Products)
-app.use('/users',Users)
-app.use('/orders',Orders)
-app.listen(port,(()=>console.log(`Listening on ${port}`)))
+app.listen(port, (() => console.log(`Listening on ${port}`)))
