@@ -1,12 +1,13 @@
 import React from 'react'
 import AdminPageHeader from '../../components/Admin/AdminPageHeader'
 
-const AdminSettings = () => {
+const AdminOrders = () => {
   return (
     <>
-    <AdminPageHeader title='Settings'/>
+    <AdminPageHeader title='Orders'/>
+    
     </>
   )
 }
 
-export default AdminSettings
+export default AdminOrders

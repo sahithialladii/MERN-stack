@@ -1,8 +1,9 @@
 import React from 'react'
+import AdminPageHeader from '../../components/Admin/AdminPageHeader'
 
 const AdminUsers = () => {
   return (
-    <div>AdminUsers</div>
+    <AdminPageHeader title='Users'/>
   )
 }
 

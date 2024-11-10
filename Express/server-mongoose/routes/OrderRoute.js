@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router();
 const Orders = require('../models/OrdersModel')
-
-router.get('/all', async (req, res) => {
+const validate = require('../config/auth')
+router.get('/all', validate, async (req, res) => {
     try {
         const orders = await Orders.find()
         res.status(200).json(orders)
@@ -14,8 +14,8 @@ router.get('/all', async (req, res) => {
 router.post('/add', async (req, res) => {
     try {
         const neworder = new Orders(req.body)
-        const { uid, pid, total, phone, address } = neworder
-        if (!uid || !pid || !total || !phone || !address  ) {
+        const { uid, pid, phone, address, total } = neworder
+        if (!uid || !pid || !email || !phone || !address || total) {
             res.status(400).json({ message: "All fields required" })
         }
         //TODO : Add User & Product Validation 
