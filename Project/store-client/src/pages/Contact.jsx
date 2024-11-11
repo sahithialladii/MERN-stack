@@ -12,7 +12,7 @@ const Contact = () => {
           <div className='h-[90%] w-1/2 flex flex-col justify-center items-center gap-4'>
             <div className='h-[31%] w-[70%] border rounded-md flex flex-col justify-center items-center text-lg font-semibold gap-4 shadow-md'>
               <Mail className='h-8 w-8 text-purple-600' />
-              <h1>abc@gmail.com</h1>
+              <h1>abc@gamil.com</h1>
             </div>
             <div className='h-[31%] w-[70%] border rounded-md flex flex-col justify-center items-center text-lg font-semibold gap-4 shadow-md'>
               <Phone className='h-8 w-8 text-purple-600' />

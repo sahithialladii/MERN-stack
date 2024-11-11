@@ -1,11 +1,8 @@
 import React from 'react'
-import AdminPageHeader from '../../components/Admin/AdminPageHeader'
 
 const AdminSettings = () => {
   return (
-    <>
-    <AdminPageHeader title='Settings'/>
-    </>
+    <div>AdminSettings</div>
   )
 }
 

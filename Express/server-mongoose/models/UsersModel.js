@@ -49,12 +49,17 @@ const UsersSchema = new mongoose.Schema({
         required: true,
         unique:true
     },
+    role:{
+        type:String,
+        enum:["ADMIN","USER"],
+        required:true
+    },
     password: {
         type: String,
         required: true,
         // unique:true
     },
-    password: {
+    address: {
         type: String,
         required: false,
     },
