@@ -10,10 +10,12 @@ const validateToken = (req, res, next) => {
     }
     try {
         const validate = jwt.verify(token, secretkey)
+        //checking expiry date
         const exp = validate.exp
         if (exp < (Date.now() / 1000)) {
             return res.status(500).json({ message: "Token Expired" })
         }
+        // checking role
         const role = validate.role
         if (!role) {
             return res.status(500).json({ message: "Invalid Access" })
