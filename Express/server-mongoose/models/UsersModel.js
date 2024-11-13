@@ -61,8 +61,8 @@ const UsersSchema = new mongoose.Schema({
     },
     address: {
         type: String,
-        required: false,
-    },
+        required: false
+    }
 })
 
 const Users = mongoose.model("Users", UsersSchema)
