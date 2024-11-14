@@ -366,11 +366,11 @@ const AdminProducts = () => {
       <table className='w-full h-full border-collapse border shadow-lg rounded-md'>
         <thead className='shadow-md font-bold text-purple-500 text-left rounded-md'>
           <tr>
-            <th className='p-6'>PID</th>
-            <th className='p-6'>Image</th>
-            <th className='p-6'>Title</th>
-            <th className='p-6'>Price</th>
-            <th className='p-6'>Actions</th>
+            <th className='p-6 border-collapse border'>PID</th>
+            <th className='p-6 border-collapse border'>Image</th>
+            <th className='p-6 border-collapse border'>Title</th>
+            <th className='p-6 border-collapse border'>Price</th>
+            <th className='p-6 border-collapse border'>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -378,17 +378,17 @@ const AdminProducts = () => {
           {
             products.map((product, index) => (
               <tr key={index}>
-                <td className='p-4'>{product._id} </td>
+                <td className='p-4 border-collapse border'>{product._id} </td>
                 <td className='flex justify-start px-4 items-center'><img src={product.img} alt={product.title} className='h-12 w-12 object-cover rounded-full shadow-md bg-purple-500' /></td>
-                <td className='p-4'>{product.title} </td>
-                <td className='p-4'>{product.price}</td>
-                <td className='p-4 flex h-full w-full flex-row justify-start items-center gap-4'>
+                <td className='p-4 border-collapse border'>{product.title} </td>
+                <td className='p-4 border-collapse border'>{product.price}</td>
+                <td className='p-4 flex h-full w-full border-collapse border flex-row justify-start items-center gap-4'>
                   <button className='h-15 w-15 border-blue-500 border-2 p-1 rounded-md text-blue-500 shadow-md
                hover:bg-blue-500 hover:text-white hover:shadow-blue-500'
                     onClick={() => { editHelper(product) }}>
                     <Pencil />
                   </button>
-                  <button className='h-15 w-15 border-red-500 border-2 p-1 rounded-md text-red-500 shadow-md
+                  <button className='h-15 w-15 border-collapse border border-red-500 border-2 p-1 rounded-md text-red-500 shadow-md
                hover:bg-red-500 hover:text-white hover:shadow-red-500'
                     onClick={() => { handleDelete(product._id) }}>
                     <Trash />
@@ -403,7 +403,7 @@ const AdminProducts = () => {
       {showAdd && (
         <>
           <div className="absolute top-0 left-0 z-50 h-screen w-screen flex justify-center items-center bg-black/40 ">
-            <div className='h-[55%] w-1/3 flex flex-col justify-center items-center bg-white shadow-2xl rounded-md'>
+            <div className='h-[75%] w-1/3 flex flex-col justify-center items-center bg-white shadow-2xl rounded-md'>
               <div className='h-full w-full flex flex-col justify-center items-center text-lg font-semibold'>
                 <div className="h-[20%] w-[80%] flex flex-row justify-center items-center">
                   <h1 className='w-1/2 text-left text-xl my-6 font-bold text-green-500'>Add Product</h1>
@@ -425,7 +425,7 @@ const AdminProducts = () => {
       {showEdit && (
         <>
           <div className="absolute top-0 left-0 z-50 h-screen w-screen flex justify-center items-center bg-black/40 ">
-            <div className='h-[55%] w-1/3 flex flex-col justify-center items-center bg-white shadow-2xl rounded-md'>
+            <div className='h-[75%] w-1/3 flex flex-col justify-center items-center bg-white shadow-2xl rounded-md'>
               <div className='h-full w-full flex flex-col justify-center items-center text-lg font-semibold'>
                 <div className="h-[20%] w-[80%] flex flex-row justify-center items-center">
                   <h1 className='w-1/2 text-left text-xl my-6 font-bold text-blue-500'>Edit Product</h1>

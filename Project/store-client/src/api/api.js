@@ -14,17 +14,21 @@ const deleteProduct = (id) => axios.delete(`${API}/products/delete/${id}`)
 // OrderEndPonts
 const getOrders = () => axios.get(`${API}/orders/all`)
 const getOrdersCount = () => axios.get(`${API}/orders/count`)
-const addUser = (user) => axios.post(`${API}/users/add`, user)
-const editUser = (user, id) => axios.put(`${API}/users/edit/${id}`, user)
-const deleteUser = (id) => axios.delete(`${API}/users/delete/${id}`)
+const addOrder = (order) => axios.post(`${API}/orders/add`, order)
+const editOrder = (order, id) => axios.put(`${API}/orders/edit/${id}`, order)
+const deleteOrder = (id) => axios.delete(`${API}/orders/delete/${id}`)
 
 
 //UserEndPoints
 const getUsers = () => axios.get(`${API}/users/all`)
 const getUsersCount = () => axios.get(`${API}/users/count`)
-const addOrder = (order) => axios.post(`${API}/orders/add`, order)
-const editOrder = (order, id) => axios.put(`${API}/orders/edit/${id}`, order)
-const deleteOrder = (id) => axios.delete(`${API}/orders/delete/${id}`)
+const addUser = (user) => axios.post(`${API}/users/add`, user)
+const editUser = (user, id) => axios.put(`${API}/users/edit/${id}`, user)
+const deleteUser = (id) => axios.delete(`${API}/users/delete/${id}`)
+
+const resetpassword=(user,id)=>axios.put(`${API}/users/resetpassword/${id}`,user)
+
+
 
 //AuthEndponts
 const Login = (credentials) => axios.post(`${API}/auth/login`, credentials)
@@ -43,6 +47,7 @@ export {
     addUser,
     editUser,
     deleteUser,
+    resetpassword,
     getOrders,
     addOrder,
     editOrder,
