@@ -1,8 +1,27 @@
 
 import axios from 'axios'
+import {getToken} from '../service/auth'
 
 
 const API = 'http://localhost:3000'
+
+
+const axiosInstance = axios.create({
+    API
+})
+axiosInstance.interceptors.request.use(
+    (config) => {
+        const token = getToken()
+        if (token) {
+            config.headers.Authorization = token
+        }
+        return config;
+    },
+    (error) => {
+        return Promise.reject(error)
+    }
+)
+
 
 // ProductEndPonts
 const getProducts = () => axios.get(`${API}/products/all`)
@@ -14,8 +33,6 @@ const deleteProduct = (id) => axios.delete(`${API}/products/delete/${id}`)
 // OrderEndPonts
 const getOrders = () => axios.get(`${API}/orders/all`)
 const getOrdersCount = () => axios.get(`${API}/orders/count`)
-const addOrder = (order) => axios.post(`${API}/orders/add`, order)
-const editOrder = (order, id) => axios.put(`${API}/orders/edit/${id}`, order)
 const deleteOrder = (id) => axios.delete(`${API}/orders/delete/${id}`)
 
 
@@ -49,8 +66,6 @@ export {
     deleteUser,
     resetpassword,
     getOrders,
-    addOrder,
-    editOrder,
     deleteOrder,
-    getOrdersCount,
+    getOrdersCount
 }
